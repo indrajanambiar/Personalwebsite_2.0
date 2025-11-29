@@ -28,7 +28,7 @@ const ProjectCard = ({ title, category, difficulty, status, description, tech, l
             {status}
         </div>
 
-        <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <h3 className="project-card-title">
             {status === 'LOCKED' ? <Lock size={16} /> : <Unlock size={16} color="var(--color-accent)" />}
             {title}
         </h3>
@@ -102,7 +102,7 @@ const LevelSelect = () => {
             link: "https://github.com/indrajanambiar"
         },
         {
-            title: "HELMET_DETECT_V8",
+            title: "mask-helmet-detection",
             category: "VISION",
             difficulty: 4,
             status: "COMPLETED",

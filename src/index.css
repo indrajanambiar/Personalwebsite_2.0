@@ -388,6 +388,17 @@ img {
   flex-wrap: wrap;
 }
 
+.project-card-title {
+  font-size: 1rem;
+  /* Desktop default */
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+
 /* NUCLEAR MOBILE FIXES */
 @media (max-width: 768px) {
 
@@ -480,6 +491,58 @@ img {
   .education-item {
     padding-left: 1rem !important;
     border-left: 2px solid var(--color-primary) !important;
+  }
+
+  /* Mobile Font Optimization */
+  h1 {
+    font-size: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.2rem !important;
+  }
+
+  h3 {
+    font-size: 1rem !important;
+  }
+
+  h4 {
+    font-size: 0.9rem !important;
+  }
+
+  h5 {
+    font-size: 0.85rem !important;
+  }
+
+  h6 {
+    font-size: 0.8rem !important;
+  }
+
+  p,
+  li,
+  span {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .section-title {
+    font-size: 1.2rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Force Professional Summary to be single line on mobile */
+  .prof-summary-title {
+    font-size: 0.6rem !important;
+    /* Drastically smaller to fit */
+    white-space: nowrap !important;
+    letter-spacing: 0 !important;
+    /* Remove spacing to save space */
+  }
+
+  /* Mobile override for Project Card Titles */
+  .project-card-title {
+    font-size: 0.75rem !important;
+    /* Smaller for mobile to fit long names */
   }
 
   /* Reset container padding */

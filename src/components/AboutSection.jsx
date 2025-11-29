@@ -29,7 +29,7 @@ const AboutSection = () => {
                         </div>
 
                         <div className="about-text">
-                            <h3 style={{ color: 'var(--color-accent)', marginBottom: '1rem', fontFamily: 'var(--font-game)' }}>
+                            <h3 className="prof-summary-title" style={{ color: 'var(--color-accent)', marginBottom: '1rem', fontFamily: 'var(--font-game)' }}>
                                 // PROFESSIONAL_SUMMARY
                             </h3>
                             <p style={{ lineHeight: '1.6', fontSize: '1rem', color: 'var(--color-text-muted)' }}>
