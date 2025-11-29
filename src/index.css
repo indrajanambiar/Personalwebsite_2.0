@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #FF69B4;
+  /* Hot Pink */
+  --color-bg: #050A1A;
+  /* Very Dark Blue */
+  --color-bg-secondary: #0F1C3F;
+  /* Dark Blue */
+  --color-accent: #00BFFF;
+  /* Deep Sky Blue */
+  --color-text: #E0E0E0;
+  --color-text-muted: #A0A0A0;
+  --color-danger: #FF1493;
+  /* Deep Pink */
+
+  --font-game: 'Press Start 2P', cursive;
+  --font-body: 'Rajdhani', sans-serif;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-game);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+  text-shadow: 0 0 8px var(--color-accent);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-game);
+  border: none;
+  outline: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.pixel-border {
+  border: 4px solid var(--color-primary);
+  border-radius: 15px;
+  /* Pookie Roundness */
+  box-shadow:
+    0 0 15px var(--color-primary),
+    inset 0 0 10px rgba(255, 105, 180, 0.2);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.pixel-border:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 0 25px var(--color-primary),
+    inset 0 0 20px rgba(255, 105, 180, 0.4);
+}
+
+.glitch-text {
+  position: relative;
+  /* Cuter font for main titles? Or keep pixel but make it pink glowy */
+  text-shadow:
+    2px 2px 0px var(--color-accent),
+    -2px -2px 0px var(--color-danger);
+}
+
+/* Remove harsh glitch animations, keep it sparkly */
+.glitch-text::before,
+.glitch-text::after {
+  display: none;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(10px, 9999px, 30px, 0);
+  }
+
+  20% {
+    clip: rect(80px, 9999px, 100px, 0);
+  }
+
+  40% {
+    clip: rect(40px, 9999px, 60px, 0);
+  }
+
+  60% {
+    clip: rect(120px, 9999px, 140px, 0);
+  }
+
+  80% {
+    clip: rect(60px, 9999px, 80px, 0);
+  }
+
+  100% {
+    clip: rect(20px, 9999px, 40px, 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip: rect(120px, 9999px, 140px, 0);
+  }
+
+  20% {
+    clip: rect(20px, 9999px, 40px, 0);
+  }
+
+  40% {
+    clip: rect(80px, 9999px, 100px, 0);
+  }
+
+  60% {
+    clip: rect(10px, 9999px, 30px, 0);
+  }
+
+  80% {
+    clip: rect(100px, 9999px, 120px, 0);
+  }
+
+  100% {
+    clip: rect(40px, 9999px, 60px, 0);
+  }
+}
