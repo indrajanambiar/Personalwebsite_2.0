@@ -7,6 +7,7 @@ import CompanionBot from './components/CompanionBot';
 import AboutSection from './components/AboutSection';
 import ExperienceSection from './components/ExperienceSection';
 import ContactSection from './components/ContactSection';
+import BlogSection from './components/BlogSection';
 import ResumeModal from './components/ResumeModal';
 
 function App() {
@@ -88,6 +89,10 @@ function App() {
                 <LevelSelect />
               </section>
 
+              <section id="blog">
+                <BlogSection />
+              </section>
+
               <section id="contact">
                 <ContactSection />
               </section>
@@ -102,7 +107,7 @@ function App() {
               fontFamily: 'var(--font-game)',
               fontSize: '0.8rem'
             }}>
-              GAME OVER? NO, JUST THE BEGINNING.
+              GAME OVER? NO, THE QUEST CONTINUES.
             </footer>
 
             <CompanionBot />

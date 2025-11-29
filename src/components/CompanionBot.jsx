@@ -5,35 +5,36 @@ import { MessageSquare, X, Bot, ChevronRight } from 'lucide-react';
 const CompanionBot = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
-        { id: 1, text: "Hi Bestie! I'm Mr. Sudoko! 🌸 I can answer FAQs about Indraja! What would you like to know? ✨", sender: 'bot' }
+        { id: 1, text: "Greetings. I am Mr. Sudoko. I can provide factual information about Indraja. Select a topic below.", sender: 'bot' }
     ]);
+    const [showOptions, setShowOptions] = useState(true);
     const messagesEndRef = useRef(null);
 
     const faqData = [
         {
             id: 'skills',
-            question: "What are your top skills? 💻",
-            answer: "Indraja is a pro at **Python 🐍, RAG, and Agentic AI**! She also knows PyTorch, Azure AI, and builds cool things with LangChain! 💅"
+            question: "What are her top skills? 💻",
+            answer: "Indraja specializes in **Python, RAG, and Agentic AI**. Her technical stack includes PyTorch, Azure AI, and LangChain."
         },
         {
             id: 'projects',
-            question: "Tell me about your projects! 🚀",
-            answer: "She has built amazing things like the **Automation Bot** 📄 (Insurance processing) and **AudioLingo** 🎧 (Multilingual translation)! Check out the Level Select screen for more! ✨"
+            question: "Tell me about her projects! 🚀",
+            answer: "Key projects include an **Automation Bot** for insurance processing and **AudioLingo** for multilingual translation. Detailed case studies are available in the Level Select screen."
         },
         {
             id: 'contact',
-            question: "How can I contact you? 💌",
-            answer: "You can reach her at **nambiarindraja@gmail.com**! She is always open to cool collaborations! 💖"
+            question: "How can I contact her? 💌",
+            answer: "You can contact her via email at **nambiarindraja@gmail.com** for professional inquiries."
         },
         {
             id: 'experience',
-            question: "What is your experience? 💼",
-            answer: "She is currently a **Junior AI Developer** at PixDynamics, building production-grade AI systems! Before that, she aced her M.Sc in Computer Science! 🎓"
+            question: "What is her experience? 💼",
+            answer: "She works as a **Junior AI Developer** at PixDynamics, focusing on production-grade AI systems. She holds an M.Sc in Computer Science."
         },
         {
             id: 'fun',
-            question: "Any fun facts? 🎸",
-            answer: "She loves **Music 🎵, Singing 🎤, and playing the Ukulele 🎸**! A true creative soul! ✨"
+            question: "Any fun facts about her? 🎸",
+            answer: "Outside of work, she is interested in **Music, Singing, and playing the Ukulele**."
         }
     ];
 
@@ -43,9 +44,10 @@ const CompanionBot = () => {
 
     useEffect(() => {
         scrollToBottom();
-    }, [messages, isOpen]);
+    }, [messages, isOpen, showOptions]);
 
     const handleOptionClick = (faq) => {
+        setShowOptions(false);
         // Add user selection
         const userMsg = { id: Date.now(), text: faq.question, sender: 'user' };
         setMessages(prev => [...prev, userMsg]);
@@ -137,44 +139,69 @@ const CompanionBot = () => {
                         </div>
 
                         {/* FAQ Options */}
+                        {/* FAQ Options Area */}
                         <div style={{
                             padding: '1rem',
                             borderTop: '1px solid rgba(255,255,255,0.1)',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '0.5rem',
                             background: 'rgba(0,0,0,0.2)'
                         }}>
-                            <p style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)', fontFamily: 'var(--font-game)', marginBottom: '0.5rem' }}>
-                                SELECT A TOPIC:
-                            </p>
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                                {faqData.map((faq) => (
-                                    <motion.button
-                                        key={faq.id}
-                                        whileHover={{ scale: 1.05, background: 'var(--color-accent)', color: 'var(--color-bg)' }}
-                                        whileTap={{ scale: 0.95 }}
-                                        onClick={() => handleOptionClick(faq)}
-                                        style={{
-                                            flex: '1 1 auto',
-                                            padding: '0.5rem 0.75rem',
-                                            background: 'transparent',
-                                            border: '1px solid var(--color-primary)',
-                                            color: 'var(--color-primary)',
-                                            fontSize: '0.8rem',
-                                            cursor: 'pointer',
-                                            borderRadius: '5px',
-                                            textAlign: 'left',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            gap: '0.5rem'
-                                        }}
-                                    >
-                                        <ChevronRight size={12} />
-                                        {faq.question}
-                                    </motion.button>
-                                ))}
-                            </div>
+                            {showOptions ? (
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                    <p style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)', fontFamily: 'var(--font-game)', marginBottom: '0.5rem' }}>
+                                        SELECT A TOPIC:
+                                    </p>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                                        {faqData.map((faq) => (
+                                            <motion.button
+                                                key={faq.id}
+                                                whileHover={{ scale: 1.05, background: 'var(--color-accent)', color: 'var(--color-bg)' }}
+                                                whileTap={{ scale: 0.95 }}
+                                                onClick={() => handleOptionClick(faq)}
+                                                style={{
+                                                    flex: '1 1 auto',
+                                                    padding: '0.5rem 0.75rem',
+                                                    background: 'transparent',
+                                                    border: '1px solid var(--color-primary)',
+                                                    color: 'var(--color-primary)',
+                                                    fontSize: '0.8rem',
+                                                    cursor: 'pointer',
+                                                    borderRadius: '5px',
+                                                    textAlign: 'left',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    gap: '0.5rem'
+                                                }}
+                                            >
+                                                <ChevronRight size={12} />
+                                                {faq.question}
+                                            </motion.button>
+                                        ))}
+                                    </div>
+                                </div>
+                            ) : (
+                                <motion.button
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    onClick={() => setShowOptions(true)}
+                                    style={{
+                                        width: '100%',
+                                        padding: '0.75rem',
+                                        background: 'var(--color-primary)',
+                                        color: 'var(--color-bg)',
+                                        border: 'none',
+                                        borderRadius: '5px',
+                                        fontFamily: 'var(--font-game)',
+                                        fontSize: '0.8rem',
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        gap: '0.5rem'
+                                    }}
+                                >
+                                    <MessageSquare size={16} /> ASK ANOTHER QUESTION
+                                </motion.button>
+                            )}
                         </div>
                     </motion.div>
                 )}

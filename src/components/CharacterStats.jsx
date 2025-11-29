@@ -36,7 +36,6 @@ const CharacterStats = () => {
                 className="pixel-border"
                 style={{ padding: '2rem', background: 'rgba(15, 28, 63, 0.9)' }}
             >
-            >
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                     {/* Header */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', borderBottom: '2px solid var(--color-primary)', paddingBottom: '1rem' }}>
