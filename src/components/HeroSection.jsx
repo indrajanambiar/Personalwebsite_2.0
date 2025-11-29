@@ -124,7 +124,7 @@ const HeroSection = ({ onStart, onResume }) => {
         fontFamily: 'var(--font-game)',
         fontSize: '0.8rem'
       }}>
-        © 2025 INDRAJA STUDIOS. ALL RIGHTS RESERVED.
+        © 2025 INDRAJA. ALL RIGHTS RESERVED.
       </div>
 
       <style>{`

@@ -5,7 +5,7 @@ import { MessageSquare, X, Bot, ChevronRight } from 'lucide-react';
 const CompanionBot = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
-        { id: 1, text: "Greetings. I am Mr. Sudoko. I can provide factual information about Indraja. Select a topic below.", sender: 'bot' }
+        { id: 1, text: "Greetings. I am Mr. Sudoko 🤖. I can provide factual information about Indraja. Select a topic below. 🙂", sender: 'bot' }
     ]);
     const [showOptions, setShowOptions] = useState(true);
     const messagesEndRef = useRef(null);
@@ -150,15 +150,15 @@ const CompanionBot = () => {
                                     <p style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)', fontFamily: 'var(--font-game)', marginBottom: '0.5rem' }}>
                                         SELECT A TOPIC:
                                     </p>
-                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', maxHeight: '150px', overflowY: 'auto', paddingRight: '0.5rem' }}>
                                         {faqData.map((faq) => (
                                             <motion.button
                                                 key={faq.id}
-                                                whileHover={{ scale: 1.05, background: 'var(--color-accent)', color: 'var(--color-bg)' }}
-                                                whileTap={{ scale: 0.95 }}
+                                                whileHover={{ scale: 1.02, background: 'var(--color-accent)', color: 'var(--color-bg)' }}
+                                                whileTap={{ scale: 0.98 }}
                                                 onClick={() => handleOptionClick(faq)}
                                                 style={{
-                                                    flex: '1 1 auto',
+                                                    width: '100%',
                                                     padding: '0.5rem 0.75rem',
                                                     background: 'transparent',
                                                     border: '1px solid var(--color-primary)',
@@ -169,7 +169,8 @@ const CompanionBot = () => {
                                                     textAlign: 'left',
                                                     display: 'flex',
                                                     alignItems: 'center',
-                                                    gap: '0.5rem'
+                                                    gap: '0.5rem',
+                                                    flexShrink: 0
                                                 }}
                                             >
                                                 <ChevronRight size={12} />
