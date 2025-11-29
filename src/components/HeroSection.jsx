@@ -34,7 +34,7 @@ const HeroSection = ({ onStart, onResume }) => {
         transition={{ duration: 1 }}
         style={{ zIndex: 10, textAlign: 'center' }}
       >
-        <h1 className="glitch-text" data-text="INDRAJA NAMBIAR" style={{
+        <h1 className="glitch-text hero-title" data-text="INDRAJA NAMBIAR" style={{
           fontSize: '4rem',
           marginBottom: '2rem',
           textShadow: '0 0 20px var(--color-primary)'

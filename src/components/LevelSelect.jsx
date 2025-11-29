@@ -158,26 +158,17 @@ const LevelSelect = () => {
     ];
 
     return (
-        <div className="container" style={{ padding: '4rem 1rem' }}>
+        <div className="container section-padding">
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
             >
-                <h2 style={{
-                    textAlign: 'center',
-                    fontSize: '2.5rem',
-                    marginBottom: '3rem',
-                    textShadow: '0 0 10px var(--color-primary)'
-                }}>
+                <h2 className="section-title">
                     SELECT LEVEL
                 </h2>
 
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-                    gap: '2rem'
-                }}>
+                <div className="projects-grid">
                     {projects.map((project, index) => (
                         <ProjectCard key={index} {...project} />
                     ))}

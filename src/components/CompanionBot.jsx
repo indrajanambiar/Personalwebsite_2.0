@@ -58,7 +58,7 @@ const CompanionBot = () => {
     };
 
     return (
-        <div style={{ position: 'fixed', bottom: '2rem', right: '2rem', zIndex: 100 }}>
+        <div style={{ position: 'fixed', bottom: '1.5rem', right: '1.5rem', zIndex: 100 }}>
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -67,8 +67,8 @@ const CompanionBot = () => {
                         exit={{ opacity: 0, y: 20, scale: 0.9 }}
                         className="pixel-border"
                         style={{
-                            width: '320px',
-                            height: '500px',
+                            width: 'min(320px, 90vw)',
+                            height: 'min(500px, 80vh)',
                             background: 'var(--color-bg-secondary)',
                             marginBottom: '1rem',
                             display: 'flex',

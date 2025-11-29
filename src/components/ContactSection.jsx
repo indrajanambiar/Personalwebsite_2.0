@@ -31,7 +31,7 @@ const ContactSection = () => {
     ];
 
     return (
-        <div className="container" style={{ padding: '4rem 1rem' }}>
+        <div className="container section-padding">
             <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -39,15 +39,7 @@ const ContactSection = () => {
                 className="pixel-border"
                 style={{ padding: '3rem', background: 'rgba(15, 28, 63, 0.9)', textAlign: 'center' }}
             >
-                <h2 style={{
-                    fontSize: '2.5rem',
-                    marginBottom: '1rem',
-                    textShadow: '0 0 10px var(--color-primary)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '1rem'
-                }}>
+                <h2 className="section-title">
                     <Send size={40} /> ESTABLISH_UPLINK
                 </h2>
 
@@ -55,12 +47,7 @@ const ContactSection = () => {
                     Ready to collaborate on the next big AI project? Send a transmission.
                 </p>
 
-                <div style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    gap: '2rem',
-                    flexWrap: 'wrap'
-                }}>
+                <div className="contact-grid">
                     {socialLinks.map((link) => (
                         <motion.a
                             key={link.name}
@@ -69,19 +56,7 @@ const ContactSection = () => {
                             rel="noopener noreferrer"
                             whileHover={{ y: -5, scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
-                            style={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                gap: '0.5rem',
-                                textDecoration: 'none',
-                                color: 'var(--color-text)',
-                                padding: '1.5rem',
-                                background: 'rgba(255, 255, 255, 0.05)',
-                                borderRadius: '15px',
-                                width: '120px',
-                                border: '1px solid rgba(255, 255, 255, 0.1)'
-                            }}
+                            className="contact-card"
                         >
                             <div style={{
                                 color: 'var(--color-bg)',

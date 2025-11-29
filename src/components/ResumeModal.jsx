@@ -34,12 +34,14 @@ const ResumeModal = ({ isOpen, onClose }) => {
                     className="pixel-border"
                     style={{
                         background: 'var(--color-bg-secondary)',
-                        padding: '2rem',
+                        padding: '1.5rem',
                         maxWidth: '800px',
-                        width: '90%',
+                        width: '95%',
+                        maxHeight: '90vh',
+                        overflowY: 'auto',
                         position: 'relative',
                         display: 'flex',
-                        gap: '2rem',
+                        gap: '1.5rem',
                         flexWrap: 'wrap'
                     }}
                 >

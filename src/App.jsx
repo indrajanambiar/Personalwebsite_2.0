@@ -48,7 +48,7 @@ function App() {
               borderBottom: '2px solid var(--color-primary)',
               padding: '1rem'
             }}>
-              <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
                 <div style={{ fontFamily: 'var(--font-game)', color: 'var(--color-primary)' }}>
                   INDRAJA_OS <span style={{ color: 'var(--color-accent)', fontSize: '0.8rem' }}>[ONLINE]</span>
                 </div>

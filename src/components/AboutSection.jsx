@@ -4,39 +4,23 @@ import { BookOpen, Award, GraduationCap, Scroll } from 'lucide-react';
 
 const AboutSection = () => {
     return (
-        <div className="container" style={{ padding: '4rem 1rem' }}>
+        <div className="container section-padding">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="pixel-border"
-                style={{ padding: '2rem', background: 'rgba(15, 28, 63, 0.9)' }}
+                style={{ padding: '1.5rem', background: 'rgba(15, 28, 63, 0.9)' }} // Reduced padding
             >
-                <h2 style={{
-                    textAlign: 'center',
-                    fontSize: '2.5rem',
-                    marginBottom: '3rem',
-                    textShadow: '0 0 10px var(--color-primary)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '1rem'
-                }}>
-                    <BookOpen size={40} /> NAMBY'S LORE & ORIGIN
+                <h2 className="section-title">
+                    <BookOpen size={30} /> NAMBY'S LORE & ORIGIN
                 </h2>
 
-                <div style={{ display: 'grid', gap: '3rem' }}>
+                <div className="about-section-grid">
 
                     {/* Professional Summary & Image */}
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                        <div style={{
-                            width: '100%',
-                            height: 'auto',
-                            border: '2px solid var(--color-primary)',
-                            padding: '5px',
-                            background: 'rgba(255,255,255,0.05)',
-                            overflow: 'hidden'
-                        }}>
+                    <div className="about-content-wrapper">
+                        <div className="about-image-container">
                             <img
                                 src="/images/image_2.jpeg"
                                 alt="Indraja Nambiar"
@@ -44,82 +28,48 @@ const AboutSection = () => {
                             />
                         </div>
 
-                        <div>
+                        <div className="about-text">
                             <h3 style={{ color: 'var(--color-accent)', marginBottom: '1rem', fontFamily: 'var(--font-game)' }}>
                                 // PROFESSIONAL_SUMMARY
                             </h3>
-                            <p style={{ lineHeight: '1.8', fontSize: '1.1rem', color: 'var(--color-text-muted)' }}>
-                                AI Developer with hands-on experience building production-grade applications powered by Large Language Models (LLMs) such as OpenAI GPT, LangChain, and LangGraph on Azure. Skilled in Python, NLP, RAG, Agentic AI, and Computer Vision, with practical expertise in designing automation workflows that solve real-world business problems.
+                            <p style={{ lineHeight: '1.6', fontSize: '1rem', color: 'var(--color-text-muted)' }}>
+                                AI Developer with hands-on experience building production-grade applications powered by Large Language Models (LLMs) such as OpenAI GPT, LangChain, and LangGraph on Azure. Skilled in Python, NLP, RAG, Agentic AI, and Computer Vision.
                                 <br /><br />
-                                Strong background in document intelligence, data extraction, and chatbot development, including integrating AI systems into cloud environments and streamlining data-driven processes. Experienced with prompt engineering and optimization techniques for high-performance AI systems.
+                                Strong background in document intelligence, data extraction, and chatbot development. Experienced with prompt engineering and optimization techniques for high-performance AI systems.
                             </p>
                         </div>
                     </div>
 
                     {/* Education Timeline */}
                     <div>
-                        <h3 style={{ color: 'var(--color-accent)', marginBottom: '1.5rem', fontFamily: 'var(--font-game)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                            <GraduationCap size={24} /> EDUCATION_LOGS
+                        <h3 className="section-title" style={{ fontSize: '1.2rem', marginBottom: '1.5rem', justifyContent: 'flex-start' }}>
+                            <GraduationCap size={20} /> EDUCATION_LOGS
                         </h3>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                            <div style={{
-                                borderLeft: '2px solid var(--color-primary)',
-                                paddingLeft: '1.5rem',
-                                position: 'relative'
-                            }}>
-                                <div style={{
-                                    position: 'absolute',
-                                    left: '-6px',
-                                    top: '0',
-                                    width: '10px',
-                                    height: '10px',
-                                    background: 'var(--color-primary)',
-                                    borderRadius: '50%'
-                                }} />
-                                <h4 style={{ fontSize: '1.2rem', color: 'var(--color-text)' }}>M.SC. IN COMPUTER SCIENCE (SPECIALISED IN DATA ANALYTICS)</h4>
-                                <p style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-game)', fontSize: '0.9rem' }}>2021 – 2023</p>
-                                <p style={{ color: 'var(--color-text-muted)' }}>Digital University Kerala, Thiruvananthapuram</p>
+                            <div className="education-item">
+                                <h4 style={{ fontSize: '1rem', color: 'var(--color-text)', lineHeight: '1.4' }}>M.SC. IN COMPUTER SCIENCE (DATA ANALYTICS)</h4>
+                                <p style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-game)', fontSize: '0.8rem', marginTop: '0.5rem' }}>2021 – 2023</p>
+                                <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>Digital University Kerala</p>
                             </div>
 
-                            <div style={{
-                                borderLeft: '2px solid var(--color-primary)',
-                                paddingLeft: '1.5rem',
-                                position: 'relative'
-                            }}>
-                                <div style={{
-                                    position: 'absolute',
-                                    left: '-6px',
-                                    top: '0',
-                                    width: '10px',
-                                    height: '10px',
-                                    background: 'var(--color-primary)',
-                                    borderRadius: '50%'
-                                }} />
-                                <h4 style={{ fontSize: '1.2rem', color: 'var(--color-text)' }}>B.VOC IN BUSINESS PROCESS & DATA ANALYTICS</h4>
-                                <p style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-game)', fontSize: '0.9rem' }}>2018 – 2021</p>
-                                <p style={{ color: 'var(--color-text-muted)' }}>Cochin University of Science and Technology, Kochi</p>
+                            <div className="education-item">
+                                <h4 style={{ fontSize: '1rem', color: 'var(--color-text)', lineHeight: '1.4' }}>B.VOC IN BUSINESS PROCESS & DATA ANALYTICS</h4>
+                                <p style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-game)', fontSize: '0.8rem', marginTop: '0.5rem' }}>2018 – 2021</p>
+                                <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>CUSAT, Kochi</p>
                             </div>
                         </div>
                     </div>
 
                     {/* Awards */}
                     <div>
-                        <h3 style={{ color: 'var(--color-accent)', marginBottom: '1.5rem', fontFamily: 'var(--font-game)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                            <Award size={24} /> ACHIEVEMENTS_UNLOCKED
+                        <h3 className="section-title" style={{ fontSize: '1.2rem', marginBottom: '1.5rem', justifyContent: 'flex-start' }}>
+                            <Award size={20} /> ACHIEVEMENTS
                         </h3>
-                        <div style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '1rem',
-                            background: 'rgba(255, 215, 0, 0.1)',
-                            padding: '1rem',
-                            borderRadius: '10px',
-                            border: '1px solid var(--color-primary)'
-                        }}>
-                            <span style={{ fontSize: '1.5rem' }}>🏆</span>
+                        <div className="achievement-card">
+                            <span style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>🏆</span>
                             <div>
-                                <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.2rem' }}>Special Recognition Award</h4>
+                                <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.2rem', fontSize: '1rem' }}>Special Recognition Award</h4>
                                 <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>PixDynamics (2024)</p>
                             </div>
                         </div>
@@ -127,27 +77,19 @@ const AboutSection = () => {
 
                     {/* Certifications */}
                     <div>
-                        <h3 style={{ color: 'var(--color-accent)', marginBottom: '1.5rem', fontFamily: 'var(--font-game)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                            <Scroll size={24} /> CERTIFICATIONS & WORKSHOPS
+                        <h3 className="section-title" style={{ fontSize: '1.2rem', marginBottom: '1.5rem', justifyContent: 'flex-start' }}>
+                            <Scroll size={20} /> CERTIFICATIONS
                         </h3>
-                        <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gap: '1rem' }}>
+                        <ul className="certifications-list">
                             {[
-                                "Blockchain Foundation Program – Kerala Blockchain Academy",
-                                "International Workshop on Business Intelligence and Analytics",
-                                "Advanced Data Analysis with MS Excel – Workshop",
-                                "Big Data: Hands-on Experience – Workshop"
+                                "Blockchain Foundation Program",
+                                "Business Intelligence Workshop",
+                                "Advanced Excel Workshop",
+                                "Big Data Hands-on Workshop"
                             ].map((cert, index) => (
-                                <li key={index} style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '1rem',
-                                    background: 'rgba(255, 255, 255, 0.05)',
-                                    padding: '1rem',
-                                    borderRadius: '10px',
-                                    border: '1px solid rgba(255, 255, 255, 0.1)'
-                                }}>
-                                    <span style={{ color: 'var(--color-text-muted)' }}>📜</span>
-                                    {cert}
+                                <li key={index} className="certification-item">
+                                    <span style={{ color: 'var(--color-text-muted)', marginRight: '0.5rem' }}>📜</span>
+                                    <span style={{ fontSize: '0.9rem' }}>{cert}</span>
                                 </li>
                             ))}
                         </ul>

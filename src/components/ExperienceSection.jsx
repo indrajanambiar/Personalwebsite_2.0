@@ -40,22 +40,13 @@ const ExperienceSection = () => {
     ];
 
     return (
-        <div className="container" style={{ padding: '4rem 1rem' }}>
+        <div className="container section-padding">
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
             >
-                <h2 style={{
-                    textAlign: 'center',
-                    fontSize: '2.5rem',
-                    marginBottom: '3rem',
-                    textShadow: '0 0 10px var(--color-primary)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '1rem'
-                }}>
+                <h2 className="section-title">
                     <Scroll size={40} /> QUEST LOG (EXPERIENCE)
                 </h2>
 
@@ -97,7 +88,7 @@ const ExperienceSection = () => {
                                     <h4 style={{ fontFamily: 'var(--font-game)', fontSize: '1rem', marginBottom: '1rem', color: 'var(--color-text-muted)' }}>
                                         {`>>`} COMPLETED FACTION QUESTS:
                                     </h4>
-                                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
+                                    <div className="experience-grid">
                                         {exp.quests.map((quest, qIndex) => (
                                             <div key={qIndex} style={{
                                                 background: 'rgba(0,0,0,0.2)',

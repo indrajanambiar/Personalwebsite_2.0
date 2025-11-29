@@ -178,3 +178,330 @@ button {
     clip: rect(40px, 9999px, 60px, 0);
   }
 }
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 2rem !important;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .pixel-border {
+    padding: 1.5rem !important;
+  }
+
+  /* Mobile Flex Direction */
+  .flex-mobile-col {
+    flex-direction: column !important;
+  }
+
+  /* Mobile Text Alignment */
+  .text-mobile-center {
+    text-align: center !important;
+  }
+
+  /* Section Title Override */
+  .section-title {
+    font-size: 1.8rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Section Padding Override */
+  .section-padding {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+/* Global Utilities */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  text-shadow: 0 0 10px var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  /* Allow title to wrap on small screens */
+  line-height: 1.2;
+}
+
+.section-padding {
+  padding: 4rem 1rem;
+}
+
+/* Ensure images never overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile Grid Overrides */
+@media (max-width: 768px) {
+  .grid-mobile-1 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .flex-mobile-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  /* Specific About Section Fixes */
+  .about-content-wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .about-image-container {
+    max-width: 250px !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .about-text {
+    text-align: left !important;
+    /* Keep text readable */
+  }
+
+  /* Education, Achievements, Certs Mobile Fixes */
+  .education-item {
+    padding-left: 1rem !important;
+  }
+
+  .achievement-card {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .certification-item {
+    align-items: flex-start !important;
+  }
+
+  /* Contact Section Mobile Fixes */
+  .contact-grid {
+    gap: 1rem !important;
+  }
+
+  .contact-card {
+    width: 100% !important;
+    /* Full width in grid cells */
+    padding: 1rem !important;
+  }
+}
+
+.about-content-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.about-image-container {
+  width: 100%;
+  max-width: 450px;
+  /* Increased from 300px for desktop */
+  height: auto;
+  border: 2px solid var(--color-primary);
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.about-section-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+.certifications-list {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+/* Mobile overrides for these new classes are handled in the media query block or below */
+@media (max-width: 768px) {
+  .about-section-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .certifications-list {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+.education-item {
+  border-left: 2px solid var(--color-primary);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.achievement-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 215, 0, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-primary);
+}
+
+.certification-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Grid Classes */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Desktop default */
+  gap: 1rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Desktop default */
+  gap: 2rem;
+}
+
+.contact-grid {
+  display: flex;
+  /* Desktop default: Flex for centered row */
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* NUCLEAR MOBILE FIXES */
+@media (max-width: 768px) {
+
+  /* Grid Overrides for Mobile */
+  .experience-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+  }
+
+  .contact-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+    gap: 1rem !important;
+    justify-items: center !important;
+  }
+
+  .contact-card {
+    width: 100% !important;
+    padding: 1rem !important;
+  }
+
+  /* Force everything to fit */
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Prevent horizontal scroll */
+  body,
+  html {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative;
+  }
+
+  /* Force text wrapping everywhere */
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span,
+  div,
+  li {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+  }
+
+  /* Force column layout for specific complex sections */
+  .about-content-wrapper,
+  .achievement-card,
+  .certification-item,
+  .education-item,
+  .flex-mobile-col {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    /* Allow flex shrinking */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Reset specific alignments */
+  .about-image-container {
+    margin: 0 auto 1.5rem auto !important;
+    max-width: 200px !important;
+    /* Smaller image */
+  }
+
+  .about-text {
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  /* Fix list items in certifications */
+  .certification-item {
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding: 1rem !important;
+  }
+
+  /* Fix education items */
+  .education-item {
+    padding-left: 1rem !important;
+    border-left: 2px solid var(--color-primary) !important;
+  }
+
+  /* Reset container padding */
+  .container,
+  .section-padding {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    width: 100% !important;
+  }
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  width: 120px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s;
+}
