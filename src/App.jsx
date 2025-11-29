@@ -49,13 +49,14 @@ function App() {
               borderBottom: '2px solid var(--color-primary)',
               padding: '1rem'
             }}>
-              <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
-                <div style={{ fontFamily: 'var(--font-game)', color: 'var(--color-primary)' }}>
-                  INDRAJA_OS <span style={{ color: 'var(--color-accent)', fontSize: '0.8rem' }}>[ONLINE]</span>
+              <div className="container game-header-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.5rem' }}>
+                <div className="header-branding" style={{ fontFamily: 'var(--font-game)', color: 'var(--color-primary)' }}>
+                  INDRAJA_OS <span className="header-status" style={{ color: 'var(--color-accent)', fontSize: '0.8rem' }}>[ONLINE]</span>
                 </div>
                 <div style={{ display: 'flex', gap: '1rem', fontSize: '0.8rem', fontFamily: 'var(--font-game)', alignItems: 'center' }}>
                   <button
                     onClick={() => setGameState('MENU')}
+                    className="home-button"
                     style={{
                       background: 'transparent',
                       color: 'var(--color-accent)',
@@ -89,9 +90,9 @@ function App() {
                 <LevelSelect />
               </section>
 
-              <section id="blog">
+              {/* <section id="blog">
                 <BlogSection />
-              </section>
+              </section> */}
 
               <section id="contact">
                 <ContactSection />

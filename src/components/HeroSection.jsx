@@ -101,7 +101,7 @@ const HeroSection = ({ onStart, onResume }) => {
           INDRAJA NAMBIAR
         </h1>
 
-        <p style={{
+        <p className="hero-subtitle" style={{
           fontFamily: 'var(--font-game)',
           color: 'var(--color-accent)',
           marginBottom: '4rem',
@@ -115,7 +115,7 @@ const HeroSection = ({ onStart, onResume }) => {
             whileHover={{ scale: 1.1, textShadow: "0 0 8px rgb(255, 255, 255)" }}
             whileTap={{ scale: 0.95 }}
             onClick={onStart}
-            className="pixel-border"
+            className="pixel-border hero-main-button"
             style={{
               padding: '1.5rem 4rem',
               fontSize: '1.5rem',
@@ -132,6 +132,7 @@ const HeroSection = ({ onStart, onResume }) => {
           <motion.button
             whileHover={{ scale: 1.1, color: 'var(--color-primary)' }}
             onClick={onResume}
+            className="hero-nav-button"
             style={{
               background: 'transparent',
               color: 'var(--color-text-muted)',
@@ -147,6 +148,7 @@ const HeroSection = ({ onStart, onResume }) => {
           <motion.button
             whileHover={{ scale: 1.1, color: 'var(--color-primary)' }}
             onClick={() => setShowSettings(true)}
+            className="hero-nav-button"
             style={{
               background: 'transparent',
               color: 'var(--color-text-muted)',
@@ -161,6 +163,7 @@ const HeroSection = ({ onStart, onResume }) => {
           <motion.button
             whileHover={{ scale: 1.1, color: 'var(--color-primary)' }}
             onClick={() => window.open('https://github.com/indrajanambiar', '_blank')}
+            className="hero-nav-button"
             style={{
               background: 'transparent',
               color: 'var(--color-text-muted)',
@@ -175,7 +178,7 @@ const HeroSection = ({ onStart, onResume }) => {
         </div>
       </motion.div>
 
-      <div style={{
+      <div className="hero-footer-text" style={{
         position: 'absolute',
         bottom: '2rem',
         width: '100%',
