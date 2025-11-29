@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Play, Terminal, Cpu, Github } from 'lucide-react';
 
 const HeroSection = ({ onStart, onResume }) => {
+  const [showSettings, setShowSettings] = React.useState(false);
+
   return (
     <div className="hero-container" style={{
       height: '100vh',
@@ -13,6 +15,63 @@ const HeroSection = ({ onStart, onResume }) => {
       position: 'relative',
       overflow: 'hidden'
     }}>
+      {/* Settings Modal */}
+      {showSettings && (
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'rgba(0,0,0,0.8)',
+          zIndex: 50,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backdropFilter: 'blur(5px)'
+        }}>
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="pixel-border"
+            style={{
+              background: 'var(--color-bg-secondary)',
+              padding: '2rem',
+              width: '300px',
+              textAlign: 'center'
+            }}
+          >
+            <h2 style={{ marginBottom: '1.5rem', fontSize: '1.2rem' }}>SYSTEM SETTINGS</h2>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-game)', fontSize: '0.8rem' }}>
+                <span>AUDIO</span>
+                <span style={{ color: 'var(--color-primary)' }}>ON</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-game)', fontSize: '0.8rem' }}>
+                <span>GRAPHICS</span>
+                <span style={{ color: 'var(--color-primary)' }}>ULTRA</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-game)', fontSize: '0.8rem' }}>
+                <span>SERVER</span>
+                <span style={{ color: 'var(--color-accent)' }}>ASIA (KERALA)</span>
+              </div>
+            </div>
+
+            <button
+              onClick={() => setShowSettings(false)}
+              style={{
+                width: '100%',
+                padding: '0.75rem',
+                background: 'var(--color-primary)',
+                color: 'var(--color-bg)',
+                fontFamily: 'var(--font-game)',
+                fontSize: '0.9rem'
+              }}
+            >
+              CLOSE
+            </button>
+          </motion.div>
+        </div>
+      )}
+
       {/* Background Grid Animation */}
       <div className="grid-bg" style={{
         position: 'absolute',
@@ -87,6 +146,7 @@ const HeroSection = ({ onStart, onResume }) => {
 
           <motion.button
             whileHover={{ scale: 1.1, color: 'var(--color-primary)' }}
+            onClick={() => setShowSettings(true)}
             style={{
               background: 'transparent',
               color: 'var(--color-text-muted)',
