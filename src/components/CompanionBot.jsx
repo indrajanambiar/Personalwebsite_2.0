@@ -14,12 +14,12 @@ const CompanionBot = () => {
         {
             id: 'skills',
             question: "What are her top skills? 💻",
-            answer: "Indraja specializes in **Python, RAG, and Agentic AI**. Her technical stack includes PyTorch, Azure AI, and LangChain."
+            answer: "Indraja specializes in **Python, RAG, and Agentic AI**. Her technical stack includes PyTorch, Azure AI, Langgraph and LangChain."
         },
         {
             id: 'projects',
             question: "Tell me about her projects! 🚀",
-            answer: "Key projects include an **Automation Bot** for insurance processing and **AudioLingo** for multilingual translation. Detailed case studies are available in the Level Select screen."
+            answer: "Key projects include an Automation Bot for insurance processing and Agentic AI chatbot for customer support. Detailed case studies are available in the Level Select screen."
         },
         {
             id: 'contact',
@@ -33,7 +33,7 @@ const CompanionBot = () => {
         },
         {
             id: 'fun',
-            question: "Any fun facts about her? 🎸",
+            question: "Any facts about her? 🎸",
             answer: "Outside of work, she is interested in **Music, Singing, and playing the Ukulele**."
         }
     ];

@@ -39,11 +39,11 @@ const ContactSection = () => {
                 className="pixel-border"
                 style={{ padding: '3rem', background: 'rgba(15, 28, 63, 0.9)', textAlign: 'center' }}
             >
-                <h2 className="section-title">
+                <h2 className="section-title contact-section-title">
                     <Send size={40} /> ESTABLISH_UPLINK
                 </h2>
 
-                <p style={{ marginBottom: '3rem', color: 'var(--color-text-muted)', fontSize: '1.2rem' }}>
+                <p className="contact-description" style={{ marginBottom: '3rem', color: 'var(--color-text-muted)', fontSize: '1.2rem' }}>
                     Ready to collaborate on the next big AI project? Send a transmission.
                 </p>
 
@@ -69,13 +69,13 @@ const ContactSection = () => {
                             }}>
                                 {link.icon}
                             </div>
-                            <span style={{ fontFamily: 'var(--font-game)', fontSize: '0.9rem' }}>{link.name}</span>
+                            <span className="contact-card-text" style={{ fontFamily: 'var(--font-game)' }}>{link.name}</span>
                         </motion.a>
                     ))}
                 </div>
 
                 <div style={{ marginTop: '3rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem' }}>
-                    <p style={{ fontFamily: 'var(--font-game)', color: 'var(--color-primary)' }}>
+                    <p className="contact-status" style={{ fontFamily: 'var(--font-game)', color: 'var(--color-primary)' }}>
                         STATUS: OPEN FOR WORK
                     </p>
                 </div>

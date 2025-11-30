@@ -4,7 +4,7 @@ import { User, Code, Brain, Zap } from 'lucide-react';
 
 const StatBar = ({ label, value, color }) => (
     <div style={{ marginBottom: '1rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontFamily: 'var(--font-game)', fontSize: '0.8rem' }}>
+        <div className="stats-bar-label" style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontFamily: 'var(--font-game)' }}>
             <span>{label}</span>
             <span>{value}/100</span>
         </div>
@@ -56,10 +56,10 @@ const CharacterStats = () => {
                             />
                         </div>
                         <div>
-                            <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>INDRAJA NAMBAIR</h2>
-                            <p style={{ fontFamily: 'var(--font-game)', color: 'var(--color-accent)', fontSize: '0.8rem' }}>CLASS: AI DEVELOPER / ENGINEER</p>
-                            <p style={{ fontFamily: 'var(--font-game)', color: 'var(--color-text-muted)', fontSize: '0.8rem' }}>
-                                LEVEL: {years} <span style={{ color: 'var(--color-accent)' }}>(XP: {diffDays} DAYS)</span>
+                            <h2 className="stats-header-name" style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>INDRAJA NAMBAIR</h2>
+                            <p className="stats-header-info" style={{ fontFamily: 'var(--font-game)', color: 'var(--color-accent)', fontSize: '0.8rem' }}>CLASS: AI DEVELOPER / ENGINEER</p>
+                            <p className="stats-header-info" style={{ fontFamily: 'var(--font-game)', color: 'var(--color-text-muted)', fontSize: '0.8rem' }}>
+                                LEVEL: {years} <span className="stats-xp-info" style={{ color: 'var(--color-accent)' }}>(XP: {diffDays} DAYS)</span>
                             </p>
                         </div>
                     </div>
@@ -97,6 +97,7 @@ const CharacterStats = () => {
                                     <motion.span
                                         key={skill}
                                         whileHover={{ scale: 1.1, background: 'var(--color-accent)', color: 'var(--color-bg)' }}
+                                        className="stats-skill-tag"
                                         style={{
                                             padding: '0.5rem 1rem',
                                             border: '1px solid var(--color-primary)',

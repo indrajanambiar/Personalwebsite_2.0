@@ -399,6 +399,16 @@ img {
   word-break: break-word;
 }
 
+/* Default Stats Bar Label */
+.stats-bar-label {
+  font-size: 0.8rem;
+}
+
+.contact-card-text {
+  font-size: 0.7rem;
+  /* Reduced for desktop */
+}
+
 /* NUCLEAR MOBILE FIXES */
 @media (max-width: 768px) {
 
@@ -553,10 +563,46 @@ img {
     word-break: break-word;
   }
 
+  .stats-skill-tag {
+    font-size: 0.5rem !important;
+    /* Reduced from 0.7rem */
+    padding: 0.2rem 0.5rem !important;
+    /* More compact padding */
+  }
+
+  /* Contact Section Mobile Overrides */
+  .contact-section-title {
+    font-size: 1.0rem !important;
+    /* Further reduced */
+    margin-bottom: 1.0rem !important;
+  }
+
+  .contact-description {
+    font-size: 0.7rem !important;
+    /* Further reduced */
+    margin-bottom: 1.0rem !important;
+  }
+
+  .contact-card-text {
+    font-size: 0.5rem !important;
+    /* Further reduced */
+  }
+
+  .contact-status {
+    font-size: 0.6rem !important;
+    /* Further reduced */
+  }
+
   .hero-subtitle {
     font-size: 0.9rem !important;
     /* Reduced from 1.2rem */
     margin-bottom: 2rem !important;
+  }
+
+  .stats-bar-label,
+  .stats-bar-label span {
+    font-size: 0.5rem !important;
+    /* Increased for visibility */
   }
 
   .hero-main-button {
@@ -578,6 +624,22 @@ img {
   .hero-footer-text {
     font-size: 0.6rem !important;
     /* Reduced from 0.8rem */
+  }
+
+  /* Character Stats Header Mobile Overrides */
+  .stats-header-name {
+    font-size: 1.0rem !important;
+    /* Reduced from 1.5rem */
+  }
+
+  .stats-header-info {
+    font-size: 0.4rem !important;
+    /* Further reduced */
+  }
+
+  .stats-xp-info {
+    font-size: 0.4rem !important;
+    /* Even smaller XP text */
   }
 
   /* Header Mobile Fix */
