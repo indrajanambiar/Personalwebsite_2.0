@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --color-primary: #FF69B4;
-  /* Hot Pink */
-  --color-bg: #050A1A;
-  /* Very Dark Blue */
-  --color-bg-secondary: #0F1C3F;
-  /* Dark Blue */
-  --color-accent: #00BFFF;
-  /* Deep Sky Blue */
-  --color-text: #E0E0E0;
-  --color-text-muted: #A0A0A0;
-  --color-danger: #FF1493;
-  /* Deep Pink */
+  --color-primary: #FFB7B2;
+  /* Pastel Pink (Dominant) */
+  --color-bg: #1A1A2E;
+  /* Deep Pastel Navy */
+  --color-bg-secondary: #16213E;
+  /* Lighter Navy */
+  --color-accent: #A0C4FF;
+  /* Pastel Blue */
+  --color-text: #FDFDFD;
+  /* Soft White */
+  --color-text-muted: #C4C4C4;
+  --color-danger: #77DD77;
+  /* Pastel Green */
 
   --font-game: 'Press Start 2P', cursive;
   --font-body: 'Rajdhani', sans-serif;

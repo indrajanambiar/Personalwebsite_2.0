@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaHome } from 'react-icons/fa';
 import HeroSection from './components/HeroSection';
 import CharacterStats from './components/CharacterStats';
 import LevelSelect from './components/LevelSelect';
@@ -63,10 +64,13 @@ function App() {
                       border: '1px solid var(--color-accent)',
                       padding: '0.25rem 0.5rem',
                       cursor: 'pointer',
-                      borderRadius: '5px'
+                      borderRadius: '5px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.5rem'
                     }}
                   >
-                    HOME 🏠
+                    HOME <FaHome />
                   </button>
 
                 </div>

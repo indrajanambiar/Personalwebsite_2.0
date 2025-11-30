@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, Code, Brain, Zap } from 'lucide-react';
+import { FaCode, FaBrain, FaBolt } from 'react-icons/fa';
 
 const StatBar = ({ label, value, color }) => (
     <div style={{ marginBottom: '1rem' }}>
@@ -70,19 +70,19 @@ const CharacterStats = () => {
                         {/* Attributes */}
                         <div>
                             <h3 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                <Brain size={20} /> ATTRIBUTES
+                                <FaBrain size={20} /> ATTRIBUTES
                             </h3>
                             <StatBar label="INTELLIGENCE (AI/ML)" value={98} color="var(--color-primary)" />
                             <StatBar label="AGILITY (PYTHON/RAG)" value={95} color="var(--color-accent)" />
                             <StatBar label="STAMINA (DEBUGGING)" value={90} color="var(--color-danger)" />
-                            <StatBar label="MANA (CREATIVITY)" value={92} color="#9370DB" />
-                            <StatBar label="CHARISMA (MUSIC/UKULELE)" value={95} color="#FF69B4" />
+                            <StatBar label="MANA (CREATIVITY)" value={92} color="var(--color-accent)" />
+                            <StatBar label="CHARISMA (MUSIC/UKULELE)" value={95} color="#FDFD96" />
                         </div>
 
                         {/* Skills */}
                         <div>
                             <h3 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                <Zap size={20} /> SKILL TREE
+                                <FaBolt size={20} /> SKILL TREE
                             </h3>
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                                 {[
@@ -115,7 +115,7 @@ const CharacterStats = () => {
                         {/* Bio */}
                         <div>
                             <h3 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                <Code size={20} /> LORE
+                                <FaCode size={20} /> LORE
                             </h3>
                             <p style={{ lineHeight: '1.8', color: 'var(--color-text-muted)' }}>
                                 <strong>CLASS:</strong> AI Developer / Engineer

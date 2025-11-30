@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Award, GraduationCap, Scroll } from 'lucide-react';
+import { FaBookOpen, FaTrophy, FaGraduationCap, FaScroll, FaCertificate } from 'react-icons/fa';
 
 const AboutSection = () => {
     return (
@@ -13,7 +13,7 @@ const AboutSection = () => {
                 style={{ padding: '1.5rem', background: 'rgba(15, 28, 63, 0.9)' }} // Reduced padding
             >
                 <h2 className="section-title">
-                    <BookOpen size={30} /> NAMBY'S LORE & ORIGIN
+                    <FaBookOpen size={30} /> NAMBY'S LORE & ORIGIN
                 </h2>
 
                 <div className="about-section-grid">
@@ -43,7 +43,7 @@ const AboutSection = () => {
                     {/* Education Timeline */}
                     <div>
                         <h3 className="section-title" style={{ fontSize: '1.2rem', marginBottom: '1.5rem', justifyContent: 'flex-start' }}>
-                            <GraduationCap size={20} /> EDUCATION_LOGS
+                            <FaGraduationCap size={20} /> EDUCATION_LOGS
                         </h3>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -64,10 +64,10 @@ const AboutSection = () => {
                     {/* Awards */}
                     <div>
                         <h3 className="section-title" style={{ fontSize: '1.2rem', marginBottom: '1.5rem', justifyContent: 'flex-start' }}>
-                            <Award size={20} /> ACHIEVEMENTS
+                            <FaTrophy size={20} /> ACHIEVEMENTS
                         </h3>
                         <div className="achievement-card">
-                            <span style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>🏆</span>
+                            <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--color-accent)' }}><FaTrophy /></div>
                             <div>
                                 <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.2rem', fontSize: '1rem' }}>Special Recognition Award</h4>
                                 <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>PixDynamics (2024)</p>
@@ -78,7 +78,7 @@ const AboutSection = () => {
                     {/* Certifications */}
                     <div>
                         <h3 className="section-title" style={{ fontSize: '1.2rem', marginBottom: '1.5rem', justifyContent: 'flex-start' }}>
-                            <Scroll size={20} /> CERTIFICATIONS
+                            <FaScroll size={20} /> CERTIFICATIONS
                         </h3>
                         <ul className="certifications-list">
                             {[
@@ -88,7 +88,7 @@ const AboutSection = () => {
                                 "Big Data Hands-on Workshop"
                             ].map((cert, index) => (
                                 <li key={index} className="certification-item">
-                                    <span style={{ color: 'var(--color-text-muted)', marginRight: '0.5rem' }}>📜</span>
+                                    <span style={{ color: 'var(--color-text-muted)', marginRight: '0.5rem', display: 'flex', alignItems: 'center' }}><FaCertificate size={14} /></span>
                                     <span style={{ fontSize: '0.9rem' }}>{cert}</span>
                                 </li>
                             ))}

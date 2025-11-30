@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, Terminal, Cpu, Github } from 'lucide-react';
+import { FaPlay, FaTerminal, FaMicrochip, FaGithub, FaStar } from 'react-icons/fa';
 
 const HeroSection = ({ onStart, onResume }) => {
   const [showSettings, setShowSettings] = React.useState(false);
@@ -107,7 +107,7 @@ const HeroSection = ({ onStart, onResume }) => {
           marginBottom: '4rem',
           fontSize: '1.2rem'
         }}>
-          SYSTEM READY... PRESS START ✨
+          SYSTEM READY... PRESS START <FaStar size={16} style={{ display: 'inline', marginBottom: '2px' }} />
         </p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'center' }}>
@@ -126,7 +126,7 @@ const HeroSection = ({ onStart, onResume }) => {
               gap: '1rem'
             }}
           >
-            <Play size={24} /> ENTER WORLD
+            <FaPlay size={24} /> ENTER WORLD
           </motion.button>
 
           <motion.button
@@ -142,7 +142,7 @@ const HeroSection = ({ onStart, onResume }) => {
               gap: '0.5rem'
             }}
           >
-            <Terminal size={16} /> LOAD RESUME
+            <FaTerminal size={16} /> LOAD RESUME
           </motion.button>
 
           <motion.button
@@ -158,7 +158,7 @@ const HeroSection = ({ onStart, onResume }) => {
               gap: '0.5rem'
             }}
           >
-            <Cpu size={16} /> SETTINGS
+            <FaMicrochip size={16} /> SETTINGS
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.1, color: 'var(--color-primary)' }}
@@ -173,7 +173,7 @@ const HeroSection = ({ onStart, onResume }) => {
               gap: '0.5rem'
             }}
           >
-            <Github size={16} /> GITHUB
+            <FaGithub size={16} /> GITHUB
           </motion.button>
         </div>
       </motion.div>
