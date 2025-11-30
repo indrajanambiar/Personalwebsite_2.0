@@ -1,4 +1,4 @@
-# AI Developer Portfolio - Game Edition
+# AI Developer Portfolio
 
 A high-performance, interactive personal website built with **React** and **Vite**, featuring a "Cyberpunk/Retro Game" aesthetic.
 
