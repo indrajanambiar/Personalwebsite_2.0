@@ -61,7 +61,7 @@ function App() {
   return (
     <div className="app-container" style={{ minHeight: '100vh', position: 'relative' }}>
       {/* Use encoded URL for special characters */}
-      <audio ref={audioRef} loop src="/audio/Ocean%27s_Whisper.mp3" />
+      <audio ref={audioRef} loop src={`${import.meta.env.BASE_URL}audio/Ocean%27s_Whisper.mp3`} />
       <ResumeModal isOpen={showResume} onClose={() => setShowResume(false)} />
       <AnimatePresence mode="wait">
         {gameState === 'MENU' && (
@@ -70,7 +70,12 @@ function App() {
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.5 }}
           >
-            <HeroSection onStart={startGame} />
+            <HeroSection
+              onStart={startGame}
+              onResume={() => setShowResume(true)}
+              isMuted={isMuted}
+              toggleAudio={toggleAudio}
+            />
           </motion.div>
         )}
 
@@ -86,7 +91,7 @@ function App() {
               position: 'fixed',
               inset: 0,
               zIndex: -1,
-              backgroundImage: 'url(/images/image_4.png)',
+              backgroundImage: `url(${import.meta.env.BASE_URL}images/image_4.png)`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundAttachment: 'fixed',

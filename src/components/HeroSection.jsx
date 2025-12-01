@@ -92,7 +92,7 @@ const HeroSection = ({ onStart, onResume, isMuted, toggleAudio }) => {
         <div style={{
           position: 'absolute',
           inset: -10, // Reduced inset for less movement
-          backgroundImage: 'url(/images/image_2.jpeg)',
+          backgroundImage: `url(${import.meta.env.BASE_URL}images/image_2.jpeg)`,
           backgroundSize: 'cover', // Fill the screen again
           backgroundPosition: 'center 15%', // Shift image down to show head
           filter: 'grayscale(100%) brightness(0.55) contrast(1.2)', // Balanced shadow look

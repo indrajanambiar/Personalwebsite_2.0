@@ -22,7 +22,7 @@ const AboutSection = () => {
                     <div className="about-content-wrapper">
                         <div className="about-image-container">
                             <img
-                                src="/images/image_2.jpeg"
+                                src={`${import.meta.env.BASE_URL}images/image_2.jpeg`}
                                 alt="Indraja Nambiar"
                                 style={{ width: '100%', height: 'auto', display: 'block' }}
                             />
