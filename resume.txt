@@ -1,0 +1,146 @@
+Indraja nambiar
+ai Developer
++91 70126 82100
+nambiarindraja@gmail.com
+Kochi, Kerala  GIThub | LinkedIn
+
+Professional Summary
+ 
+AI Developer with hands-on experience building production-grade applications powered by Large Language Models (LLMs) such as OpenAI GPT, LangChain, and LangGraph on Azure. Skilled in Python, NLP, RAG, Agentic AI, and Computer Vision, with practical expertise in designing automation workflows that solve real-world business problems.
+Strong background in document intelligence, data extraction, and chatbot development, including integrating AI systems into cloud environments and streamlining data-driven processes. Experienced with prompt engineering and optimization techniques for high-performance AI systems.
+
+
+Experience
+ 
+
+PixDynamics Pvt. Ltd. — Junior AI Developer
+Kochi, Kerala |July 2023 – Present
+Built RAG pipelines and Agentic AI workflows using OpenAI GPT, LangChain, and LangGraph.
+Developed chatbots for document intelligence, customer queries, and automated workflow handling.
+Designed and implemented document extraction systems, including Azure Document Intelligence training for custom form and layout models.
+Created AI dashboards to visualize insights, model outputs, and workflow performance.
+Worked on object detection solutions using computer vision techniques for real-time or batch processing.
+Performed advanced prompt engineering to optimize LLM responses and improve accuracy.
+
+Bluepond AI (US-based) — Data Engineer (via PixDynamics)
+Remote | Oct 2023 – Jul 2024
+Designed AI-driven document analysis tools and automation pipelines using LangChain, LangGraph, and Azure OpenAI Services. Build automation pipelines for policy document classification leveraging Azure Functions and Blob Storage. Spearheaded research and development of prompt architecture for complex insurance-document data extraction. Contributed to chatbot systems and implemented RAG for enhanced knowledge-based retreival.
+
+
+Education
+ 
+M.SC. IN DATA ANALYTICS
+Digital University Kerala, Thiruvananthapuram  2021 – 2023
+B.VOC IN BUSINESS PROCESS & DATA ANALYTICS
+Cochin University of Science and Technology, Kochi  2018 – 2021
+
+
+
+
+Awards & Recognition
+ 
+Special Recognition Award, PixDynamics (2024)
+
+Technical Skills
+
+Programming Languages: Python, SQL, JavaScript/TypeScript, JSON, REST APIs
+Large Language Models (LLMs): OpenAI GPT, LLaMA (2/3), Phi-3, Qwen, Gemini, Mistral, Claude
+Prompting & Generative AI: Prompt Engineering, RAG (Retrieval-Augmented Generation), Agentic AI, Knowledge Graphs
+Machine Learning / ML Frameworks: scikit-learn, TensorFlow, PyTorch, XGBoost, LightGBM; Techniques: Classification, Regression, Clustering, PCA, Feature Engineering, Model Evaluation, Hyperparameter Tuning
+Deep Learning Models: CNNs, RNNs, LSTM/GRU, Transformers (BERT/GPT/LLaMA), Whisper (STT), YOLO, EfficientNet
+Embeddings & Vector Databases: all-MiniLM-L6-v2, E5, BGE models, OpenAI Embeddings, Sentence-Transformers, Qdrant, Pinecone, FAISS, ChromaDB, Weaviate
+Document Intelligence: Azure Document Intelligence (training & extraction), OCR (Tesseract/Vision APIs), Form/Table Parsing
+Computer Vision: Object Detection (YOLO), Image Classification, OpenCV
+Audio & Speech AI: Whisper Speech-to-Text, Audio Preprocessing, Noise Reduction
+Cloud & MLOps: Azure AI, Azure Blob Storage, AWS S3, Docker, Serverless APIs, GitHub Actions (CI/CD basics), Model Deployment & Monitoring
+Model Deployment & Apps: Gradio, Streamlit, Dash, Flask, FastAPI, LangChain, LangGraph
+NLP: Text Classification, Named Entity Recognition (NER), Summarization, Sentiment Analysis, Topic Modeling, Semantic Search, Tokenization, Hugging Face, spaCy
+Soft Skills: Problem Solving, System Design, Documentation, Communication
+
+Certifications
+ 
+•	Blockchain Foundation Program – Kerala Blockchain Academy
+•	International Workshop on Business Intelligence and Analytics
+•	Advanced Data Analysis with MS Excel – Workshop
+•	Big Data: Hands-on Experience – Workshop
+
+Projects
+Core Engineering Projects
+(PixDynamics)
+ 
+1. Automation Bot – AI-Driven Insurance Document Processing | PixDynamics
+		Developed an end-to-end Automation Bot using LangGraph workflows, Azure OpenAI, and Azure Blob Storage to process insurance documents.
+		Implemented Policy Check to automatically validate and match policies, binders, and quotes using OCR, metadata extraction, and business rules.
+		Built COI Bot to handle Certificate of Insurance requests from unstructured emails and attachments, classifying them as Simple, Complex, or Error using hybrid AI and deterministic rules.
+		Utilized OpenAI embeddings, advanced prompt engineering, and automated email extraction to streamline workflows.
+		Outcome: Reduced manual effort, accelerated processing time, improved accuracy, and enabled scalable document automation.
+
+2. Broker Copilot – AI-Powered Insurance Data Extraction & Comparison | PixDynamics
+		Developed the core prompt architecture for an internal AI system to extract and compare complex data from insurance documents.
+		Optimized prompts using Chain-of-Thought (CoT), Few-Shot Learning, and structured output formatting to process diverse and unstructured insurance data.
+		Applied sentence transformer models and OpenAI LLMs with advanced prompting to compare insurance documents, evaluating coverage, premiums, and suitability.
+		Conducted extensive testing on multiple LLM approaches to improve accuracy, consistency, and relevance of data extraction and document comparison.
+		Optimized prompts for performance and cost, reducing token usage and model latency while maintaining high-quality results.
+
+3. SAP Integration – RAG & Agentic AI Automation | PixDynamics
+		Developed an Agentic AI system integrated with SAP to automate quotation generation, product matching, and FAQ answering for enterprise workflows.
+		Implemented RAG (Retrieval-Augmented Generation) pipelines with LangGraph workflows and Qdrant vector database to enable accurate retrieval of relevant product and quotation data.
+		Integrated SAP APIs and SQL databases to fetch, process, and update enterprise data in real-time, with CronJobs for scheduled automation.
+		Leveraged OpenAI LLMs and Agentic AI for intelligent decision-making, multi-step workflow orchestration, and natural language responses.
+		Delivered a scalable solution that reduced manual effort, improved response time, and enhanced accuracy in quotation and product matching processes.
+4. AI Dashboard for Data Insights & Visualization | PixDynamics
+		Designed and developed an AI dashboard to visualize insights from AI models and enterprise data, supporting decision-making.
+		Implemented interactive graphs, plots, and tables for easy monitoring of model outputs, document extraction results, and workflow performance.
+		Enabled export functionality for Excel and text formats, allowing stakeholders to download and analyze data efficiently.
+		Built using Python-based visualization frameworks and dashboard tools to provide a user-friendly interface for both technical and non-technical users.
+		Delivered a solution that improved transparency, reporting efficiency, and accessibility of AI-driven insights.
+
+
+
+Open Source & Personal Projects
+
+     5. AICadamy - AI learning coach ,RAG , Agentic AI | 
+   In progress
+
+	1.	6.Helmet & Mask Detection – Computer Vision Object Detection   | https://github.com/indrajanambiar/mask-helmet-detection
+		Developed an end-to-end computer vision pipeline to detect helmets and face masks using YOLOv8n, fully CPU-compatible for lightweight deployment.
+		Fine-tuned the model on Roboflow safety datasets, achieving ~0.94 mAP@0.5 for helmets and ~0.97 mAP@0.5 for masks.
+		Automated training, evaluation, and artifact management using Typer CLI, saving per-task metrics, plots, and best weights.
+		Built FastAPI microservice with a minimal web UI for real-time predictions, highlighting helmet detections and providing downloadable results.
+		Implemented batch inference CLI, dataset QA scripts, and label remapping utilities to ensure high-quality input and outputs.
+		Designed for lightweight CPU deployment, demonstrating practical ML workflow without GPU dependency.
+Technologies: Python, YOLOv8n, Roboflow, FastAPI, PIL, Typer CLI, CPU-only deployment, object detection, computer vision, dataset preprocessing.
+
+
+	1.	7. AudioLingo – Multilingual Audio Translation Pipeline | https://github.com/indrajanambiar/AudioLingo
+		Developed a CPU-friendly, end-to-end multilingual audio translation system that transcribes, detects language, translates, and optionally synthesizes speech using open-source models.
+		Implemented Automatic Speech Recognition (ASR) with Whisper Tiny, enabling fast CPU-based transcription.
+		Built language detection using XLM-R sequence classification to identify source language for accurate translation.
+		Integrated MarianMT (Helsinki-NLP) models for multi-language translation, including custom overrides for Indian languages (Tamil, Telugu, Kannada).
+		Developed Text-to-Speech (TTS) using espeak-ng + ffmpeg for generating offline audio in multiple languages.
+		Orchestrated the entire workflow with a central AudioLingoPipeline, supporting ASR → language detection → translation → optional TTS.
+		Exposed the system via multiple APIs and UIs: FastAPI REST API, simple HTML UI, live WebSocket interface, and Gradio demo for interactive usage.
+		Designed for offline deployment with modular, config-driven architecture, enabling scalability, easy testing, and rapid experimentation.
+		Enhanced usability with real-time audio processing, exportable TTS outputs, and pipeline caching for efficient model inference.
+Technologies: Python, Whisper Tiny, XLM-R, MarianMT, Hugging Face Transformers, espeak-ng, ffmpeg, FastAPI, Gradio, WebSocket, CPU-only deployment, multilingual NLP, TTS, ASR, pipeline orchestration.
+
+
+	1.	8. Research Paper Assistant – RAG-Based Knowledge Extraction | https://github.com/indrajanambiar/research-paper-assistant
+
+		Developed a Retrieval-Augmented Generation (RAG) application to help researchers interact with and extract insights from PDF research papers.
+		Built using Streamlit, LangChain, and Groq API (Llama 3.1-8b-instant) for fast, accurate responses.
+		Implemented PDF ingestion and processing with text splitting and semantic search using ChromaDB and SentenceTransformers (all-MiniLM-L6-v2).
+		Enabled session-based querying: users can query only recently uploaded files without interference from other documents.
+		Added auto-deduplication for uploaded PDFs to maintain a clean and up-to-date knowledge base.
+		Designed intuitive UI for document management, including uploading, processing, viewing, and deleting PDFs.
+		Applied vector embeddings, semantic search, and prompt engineering to improve relevance and accuracy of LLM responses.
+Technologies: Python, Streamlit, LangChain, Groq API, Llama 3.1-8b-instant, ChromaDB, SentenceTransformers (all-MiniLM-L6-v2), RAG, PDF processing, semantic search, vector databases, prompt engineering, NLP.
+
+
+8. Fake New Detection | https://github.com/indrajanambiar/Project-on-fake-news-detection
+
+9. Rasa chatbot| https://github.com/indrajanambiar/rasa_chatbot
+
+10. Fligt fare prediction  | https://github.com/indrajanambiar/Flight_Fare_Prediction
+
+
