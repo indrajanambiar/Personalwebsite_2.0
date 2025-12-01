@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Scroll, Shield, Database, LayoutDashboard, Bot } from 'lucide-react';
+import { FaBriefcase, FaScroll, FaShieldAlt, FaDatabase, FaRobot } from 'react-icons/fa';
+import { MdDashboard } from 'react-icons/md';
 
 const ExperienceSection = () => {
     const experiences = [
@@ -13,25 +14,25 @@ const ExperienceSection = () => {
             quests: [
                 {
                     title: "AUTOMATION_BOT",
-                    icon: <Bot size={16} />,
+                    icon: <FaRobot size={16} />,
                     desc: "End-to-end insurance document processing using LangGraph, Azure OpenAI, and Blob Storage.",
                     tech: "LangGraph, Azure OpenAI"
                 },
                 {
                     title: "BROKER_COPILOT",
-                    icon: <Shield size={16} />,
+                    icon: <FaShieldAlt size={16} />,
                     desc: "AI system for extracting and comparing complex insurance data using advanced prompting.",
                     tech: "OpenAI, RAG, Prompt Eng."
                 },
                 {
                     title: "SAP_INTEGRATION",
-                    icon: <Database size={16} />,
+                    icon: <FaDatabase size={16} />,
                     desc: "Agentic AI system integrated with SAP for automated quotation and product matching.",
                     tech: "SAP, SQL, Qdrant"
                 },
                 {
                     title: "AI_DASHBOARD",
-                    icon: <LayoutDashboard size={16} />,
+                    icon: <MdDashboard size={16} />,
                     desc: "Interactive dashboard for visualizing AI model insights and workflow performance.",
                     tech: "Python, Dash, Plotly"
                 }
@@ -47,7 +48,7 @@ const ExperienceSection = () => {
                 transition={{ duration: 0.5 }}
             >
                 <h2 className="section-title">
-                    <Scroll size={40} /> QUEST LOG (EXPERIENCE)
+                    <FaScroll size={40} /> QUEST LOG (EXPERIENCE)
                 </h2>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
@@ -67,7 +68,7 @@ const ExperienceSection = () => {
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.5rem' }}>
                                 <div>
                                     <h3 style={{ fontSize: '1.5rem', color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                        <Briefcase size={20} /> {exp.company}
+                                        <FaBriefcase size={20} /> {exp.company}
                                     </h3>
                                     <p style={{ fontSize: '1.1rem', color: 'var(--color-accent)', fontFamily: 'var(--font-game)' }}>
                                         ROLE: {exp.role}

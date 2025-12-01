@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Calendar, ArrowRight, Terminal } from 'lucide-react';
+import { FaBookOpen, FaCalendarAlt, FaArrowRight, FaTerminal } from 'react-icons/fa';
 
 const BlogSection = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -39,7 +39,7 @@ const BlogSection = () => {
                 style={{ padding: '3rem', background: 'rgba(15, 28, 63, 0.9)' }}
             >
                 <h2 className="section-title">
-                    <BookOpen size={30} /> DEV_LOGS / CHRONICLES
+                    <FaBookOpen size={30} /> DEV_LOGS / CHRONICLES
                 </h2>
                 <p style={{ color: 'var(--color-text-muted)', marginBottom: '2rem', fontFamily: 'var(--font-game)' }}>
                     {`>>`} ACCESSING ARCHIVES...
@@ -82,7 +82,7 @@ const BlogSection = () => {
 
                             <div>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-accent)', fontSize: '0.8rem', marginBottom: '0.5rem', fontFamily: 'var(--font-game)' }}>
-                                    <Calendar size={14} /> {post.date}
+                                    <FaCalendarAlt size={14} /> {post.date}
                                 </div>
                                 <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--color-text)' }}>
                                     {post.title}
@@ -120,7 +120,7 @@ const BlogSection = () => {
                                     fontSize: '0.9rem',
                                     padding: 0
                                 }}>
-                                    READ_ENTRY <ArrowRight size={16} />
+                                    READ_ENTRY <FaArrowRight size={16} />
                                 </button>
                             </div>
                         </motion.div>
@@ -139,7 +139,7 @@ const BlogSection = () => {
                         alignItems: 'center',
                         gap: '0.5rem'
                     }}>
-                        <Terminal size={16} /> VIEW_ALL_ARCHIVES
+                        <FaTerminal size={16} /> VIEW_ALL_ARCHIVES
                     </button>
                 </div>
             </motion.div>

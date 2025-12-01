@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --color-primary: #FF69B4;
-  /* Hot Pink */
-  --color-bg: #050A1A;
-  /* Very Dark Blue */
-  --color-bg-secondary: #0F1C3F;
-  /* Dark Blue */
-  --color-accent: #00BFFF;
-  /* Deep Sky Blue */
-  --color-text: #E0E0E0;
-  --color-text-muted: #A0A0A0;
-  --color-danger: #FF1493;
-  /* Deep Pink */
+  --color-primary: #FF92A9;
+  /* Vibrant Pastel Pink */
+  --color-bg: #02040A;
+  /* Deepest Void (High Contrast) */
+  --color-bg-secondary: #0D1224;
+  /* Deep Navy */
+  --color-accent: #64D2FF;
+  /* Vibrant Pastel Cyan */
+  --color-text: #FFFFFF;
+  /* Pure White */
+  --color-text-muted: #B0B0B0;
+  /* Light Grey */
+  --color-danger: #50FA7B;
+  /* Neon Pastel Green */
 
   --font-game: 'Press Start 2P', cursive;
   --font-body: 'Rajdhani', sans-serif;
@@ -118,7 +120,7 @@ button {
   /* Cuter font for main titles? Or keep pixel but make it pink glowy */
   text-shadow:
     2px 2px 0px var(--color-accent),
-    -2px -2px 0px var(--color-danger);
+    0 0 10px var(--color-primary);
 }
 
 /* Remove harsh glitch animations, keep it sparkly */

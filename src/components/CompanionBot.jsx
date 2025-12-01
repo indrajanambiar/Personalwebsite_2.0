@@ -1,11 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, X, Bot, ChevronRight } from 'lucide-react';
+import { FaCommentDots, FaTimes, FaRobot, FaChevronRight, FaSmile } from 'react-icons/fa';
 
 const CompanionBot = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
-        { id: 1, text: "Greetings. I am Mr. Sudoko 🤖. I can provide factual information about Indraja. Select a topic below. 🙂", sender: 'bot' }
+        {
+            id: 1,
+            text: <span style={{ display: 'inline-block' }}>
+                Greetings. I am Mr. Sudoko <FaRobot style={{ display: 'inline', marginBottom: '-2px' }} />. I can provide factual information about Indraja. Select a topic below. <FaSmile style={{ display: 'inline', marginBottom: '-2px' }} />
+            </span>,
+            sender: 'bot'
+        }
     ]);
     const [showOptions, setShowOptions] = useState(true);
     const messagesEndRef = useRef(null);
@@ -13,27 +19,27 @@ const CompanionBot = () => {
     const faqData = [
         {
             id: 'skills',
-            question: "What are her top skills? 💻",
+            question: "What are her top skills?",
             answer: "Indraja specializes in **Python, RAG, and Agentic AI**. Her technical stack includes PyTorch, Azure AI, Langgraph and LangChain."
         },
         {
             id: 'projects',
-            question: "Tell me about her projects! 🚀",
-            answer: "Key projects include an Automation Bot for insurance processing and Agentic AI chatbot for customer support. Detailed case studies are available in the Level Select screen."
+            question: "Tell me about her projects!",
+            answer: "Key projects include an Automation Bot for insurance processing and AudioLingo for multilingual translation. Detailed case studies are available in the Level Select screen."
         },
         {
             id: 'contact',
-            question: "How can I contact her? 💌",
+            question: "How can I contact her?",
             answer: "You can contact her via email at **nambiarindraja@gmail.com** for professional inquiries."
         },
         {
             id: 'experience',
-            question: "What is her experience? 💼",
+            question: "What is her experience?",
             answer: "She works as a **Junior AI Developer** at PixDynamics, focusing on production-grade AI systems. She holds an M.Sc in Computer Science."
         },
         {
             id: 'fun',
-            question: "Any facts about her? 🎸",
+            question: "Any facts about her?",
             answer: "Outside of work, she is interested in **Music, Singing, and playing the Ukulele**."
         }
     ];
@@ -90,10 +96,10 @@ const CompanionBot = () => {
                             fontSize: '0.8rem'
                         }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                <Bot size={16} /> MR. SUDOKO (FAQ MODE)
+                                <FaRobot size={16} /> MR. SUDOKO (FAQ MODE)
                             </div>
                             <button onClick={() => setIsOpen(false)} style={{ background: 'transparent', color: 'var(--color-bg)' }}>
-                                <X size={16} />
+                                <FaTimes size={16} />
                             </button>
                         </div>
 
@@ -120,9 +126,9 @@ const CompanionBot = () => {
                                         border: msg.sender === 'user' ? 'none' : '1px solid var(--color-text-muted)',
                                         lineHeight: '1.4'
                                     }}>
-                                        {msg.text.split('**').map((part, i) =>
+                                        {typeof msg.text === 'string' ? msg.text.split('**').map((part, i) =>
                                             i % 2 === 1 ? <strong key={i} style={{ color: 'var(--color-accent)' }}>{part}</strong> : part
-                                        )}
+                                        ) : msg.text}
                                     </div>
                                     <div style={{
                                         fontSize: '0.6rem',
@@ -173,7 +179,7 @@ const CompanionBot = () => {
                                                     flexShrink: 0
                                                 }}
                                             >
-                                                <ChevronRight size={12} />
+                                                <FaChevronRight size={12} />
                                                 {faq.question}
                                             </motion.button>
                                         ))}
@@ -200,7 +206,7 @@ const CompanionBot = () => {
                                         gap: '0.5rem'
                                     }}
                                 >
-                                    <MessageSquare size={16} /> ASK ANOTHER QUESTION
+                                    <FaCommentDots size={16} /> ASK ANOTHER QUESTION
                                 </motion.button>
                             )}
                         </div>
@@ -226,7 +232,7 @@ const CompanionBot = () => {
                         border: '2px solid var(--color-bg)'
                     }}
                 >
-                    <MessageSquare size={24} />
+                    <FaCommentDots size={24} />
                 </motion.button>
             )}
         </div>

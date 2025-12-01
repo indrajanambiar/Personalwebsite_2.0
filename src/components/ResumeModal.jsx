@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FileText, Download, Eye, X, User } from 'lucide-react';
+import { FaFileAlt, FaDownload, FaEye, FaTimes } from 'react-icons/fa';
 
 const ResumeModal = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
@@ -56,7 +56,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
                             cursor: 'pointer'
                         }}
                     >
-                        <X size={24} />
+                        <FaTimes size={24} />
                     </button>
 
                     {/* Left Column: Image */}
@@ -100,7 +100,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
                             alignItems: 'center',
                             gap: '0.5rem'
                         }}>
-                            <FileText size={32} /> RESUME_DATA
+                            <FaFileAlt size={32} /> RESUME_DATA
                         </h2>
 
                         <p style={{ color: 'var(--color-text-muted)', marginBottom: '2rem', lineHeight: '1.6' }}>
@@ -126,7 +126,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
                                     border: 'none'
                                 }}
                             >
-                                <Eye size={20} /> VIEW DOCUMENT
+                                <FaEye size={20} /> VIEW DOCUMENT
                             </motion.button>
 
                             <motion.button
@@ -163,7 +163,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
                                     textDecoration: 'none'
                                 }}
                             >
-                                <Download size={20} /> DOWNLOAD DATA
+                                <FaDownload size={20} /> DOWNLOAD DATA
                             </motion.button>
                         </div>
 

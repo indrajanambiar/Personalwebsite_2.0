@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Folder, Github, ExternalLink, Lock, Unlock } from 'lucide-react';
+import { FaGithub, FaExternalLinkAlt, FaLock, FaUnlock, FaHeart } from 'react-icons/fa';
 
 const ProjectCard = ({ title, category, difficulty, status, description, tech, link }) => (
     <motion.div
@@ -29,12 +29,12 @@ const ProjectCard = ({ title, category, difficulty, status, description, tech, l
         </div>
 
         <h3 className="project-card-title">
-            {status === 'LOCKED' ? <Lock size={16} /> : <Unlock size={16} color="var(--color-accent)" />}
+            {status === 'LOCKED' ? <FaLock size={16} /> : <FaUnlock size={16} color="var(--color-accent)" />}
             {title}
         </h3>
 
-        <div style={{ marginBottom: '1rem', fontFamily: 'var(--font-game)', fontSize: '0.7rem', color: 'var(--color-text-muted)' }}>
-            ZONE: {category} | DIFFICULTY: {'💖'.repeat(difficulty)}
+        <div style={{ marginBottom: '1rem', fontFamily: 'var(--font-game)', fontSize: '0.7rem', color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            ZONE: {category} | DIFFICULTY: <div style={{ display: 'flex' }}>{[...Array(difficulty)].map((_, i) => <FaHeart key={i} size={12} color="#FF6B6B" />)}</div>
         </div>
 
         <p style={{ fontSize: '0.9rem', marginBottom: '1.5rem', flexGrow: 1 }}>
@@ -44,11 +44,11 @@ const ProjectCard = ({ title, category, difficulty, status, description, tech, l
         <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
             {tech.map(t => (
                 <span key={t} style={{
-                    background: 'rgba(255, 105, 180, 0.1)',
-                    color: 'var(--color-primary)',
+                    background: 'rgba(100, 210, 255, 0.15)',
+                    color: 'var(--color-accent)',
                     padding: '0.25rem 0.5rem',
                     fontSize: '0.7rem',
-                    border: '1px solid var(--color-primary)'
+                    border: '1px solid var(--color-accent)'
                 }}>
                     {t}
                 </span>
@@ -70,13 +70,13 @@ const ProjectCard = ({ title, category, difficulty, status, description, tech, l
                     gap: '0.5rem',
                     cursor: 'pointer'
                 }}>
-                <Github size={14} /> CODE
+                <FaGithub size={14} /> CODE
             </button>
             <button style={{
                 flex: 1,
                 padding: '0.5rem',
-                border: '1px solid var(--color-primary)',
-                color: 'var(--color-primary)',
+                border: '1px solid var(--color-accent)',
+                color: 'var(--color-accent)',
                 background: 'transparent',
                 fontSize: '0.8rem',
                 display: 'flex',
@@ -84,7 +84,7 @@ const ProjectCard = ({ title, category, difficulty, status, description, tech, l
                 justifyContent: 'center',
                 gap: '0.5rem'
             }}>
-                <ExternalLink size={14} /> DEMO
+                <FaExternalLinkAlt size={14} /> DEMO
             </button>
         </div>
     </motion.div>
