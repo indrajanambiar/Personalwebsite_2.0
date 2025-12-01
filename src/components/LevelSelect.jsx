@@ -44,11 +44,11 @@ const ProjectCard = ({ title, category, difficulty, status, description, tech, l
         <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
             {tech.map(t => (
                 <span key={t} style={{
-                    background: 'rgba(255, 183, 178, 0.1)',
-                    color: 'var(--color-primary)',
+                    background: 'rgba(100, 210, 255, 0.15)',
+                    color: 'var(--color-accent)',
                     padding: '0.25rem 0.5rem',
                     fontSize: '0.7rem',
-                    border: '1px solid var(--color-primary)'
+                    border: '1px solid var(--color-accent)'
                 }}>
                     {t}
                 </span>
@@ -75,8 +75,8 @@ const ProjectCard = ({ title, category, difficulty, status, description, tech, l
             <button style={{
                 flex: 1,
                 padding: '0.5rem',
-                border: '1px solid var(--color-primary)',
-                color: 'var(--color-primary)',
+                border: '1px solid var(--color-accent)',
+                color: 'var(--color-accent)',
                 background: 'transparent',
                 fontSize: '0.8rem',
                 display: 'flex',
